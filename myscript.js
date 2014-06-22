@@ -40,7 +40,7 @@ var newPara = document.createElement("p");
 // or create child nodes manually like so:
 // newPara.innerHTML = "blah blah blah...";
 var paraText = document.createTextNode("And now for the blah blah blah song by Ed Drain...");
-newPara.appendChild(paraText)
+newPara.appendChild(paraText);
 
 //And we still need to attach them to the document
 document.getElementById("basic").appendChild(newPara);
@@ -48,3 +48,4 @@ document.getElementById("basic").appendChild(newPara);
 var myNewElement = document.createElement("li");
 var secondItem = myElement.getElementsByTagName("li")[1];
 myElement.insertBefore(myNewElement, secondItem);
+

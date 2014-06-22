@@ -1,1 +1,8 @@
-stylesheet.css
+h1 {
+  color:#009999;
+};
+
+img {
+  margin: auto; 
+  padding: 2px 2px 2px 2px;	
+}

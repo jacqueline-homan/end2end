@@ -1,7 +1,7 @@
 <html>
 <head>
 <title id="mainTitle">Simple Page</title>
-<link rel="stylesheet" href="stylesheet.css">
+<link rel="stylesheet" href="stylesheet.css" />
 </head>
 <body>
 	<h1>Simple HTML Page</h1>
@@ -12,9 +12,38 @@
 		  <li><a href="http://www.w3schools.com/html/html_links.asp">An h1 tag</a></li>
 		  <li>2 paragraphs</li>
 		  <li>An un-ordered list</li>
-		  <li><a href=#"A pretty picture" target="_blank"><img src="images/yellow-roses.jpg"/>A pretty picture</a></li>
+		  <li><a href=#"A pretty picture" target="_blank"><img src="images/dorothy-red-ruby-slippers.jpg" id= "mainImage"/>A pretty picture</a></li>
 	    </ul>
+
     </div>
+
+    <div>
+      <form id="frmSupport" name="frmSupport"  method="post" action="support_process.htm">
+      	<fieldset id="fastSupport">
+      	  <legend><strong>Fast Support</strong></legend>
+      	    <p>If you've already booked Ed Drain, the Singing Rails Girls  coach,</br> and have not gotten a confirmation number,</br> drop us a line and we'll respond within 24 hours.</p> </p>
+      	  <p>
+      	  	<label for="email">Email:</label>
+      	  		<input type="text" value="your email" name="name" id="name" tabindex="10" />
+      	  		<input type="submit" value="Submit">
+      	  </p>
+      	  <p><b>Ed Drain's "Blah Blah Blah" Tour Status</b></p>
+      	    <label for="tourStatus" class="inline">
+      	    	<input type="radio" name="tour status" value="booked" id="tourStatus_0" tabindex="40" />Ed already toured here
+      	    </label>
+      	    <label for="tourConf" class="inline" >
+      	    	<input type="radio" name="tour conf" value="paid" id= "tourStatus_1" tabindex="50" />Ed confirmed his tour date
+      	    </label>
+      	    </br>
+      	    <p>
+      	    <label for="comments">Comments:</label>
+      		</br>
+      	    	<textarea name="txtBody" value="post comment here" id="comments"></textarea>
+      	    	<input type="submit" value="Post Comment" /> 
+	    
+	    </fieldset> 
+	  </form>
+	</div>/
 
 	<script src="myscript.js">
 	</script>

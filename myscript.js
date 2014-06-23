@@ -1,4 +1,4 @@
-alert("Hello, world!"); // this is a JavaScript alert button //
+//alert("Hello, world!"); // this is a JavaScript alert button //
 var year = 2014;
 var userEmail = "";
 var todaysDate = "";
@@ -39,7 +39,7 @@ var newPara = document.createElement("p");
 // To add content, either use inner HTML
 // or create child nodes manually like so:
 // newPara.innerHTML = "blah blah blah...";
-var paraText = document.createTextNode("And now for the blah blah blah song by Ed Drain...");
+var paraText = document.createTextNode("And now for a beginner level intro to JavaScript! YAY!");
 newPara.appendChild(paraText);
 
 //And we still need to attach them to the document
@@ -48,4 +48,34 @@ document.getElementById("basic").appendChild(newPara);
 var myNewElement = document.createElement("li");
 var secondItem = myElement.getElementsByTagName("li")[1];
 myElement.insertBefore(myNewElement, secondItem);
+
+// An example of using an anonymous function: onclick.
+//When you click anywhere on the page, an alert appears.
+//document.onclick = function() {
+//	alert("You clicked somewhere in the document");
+//}
+
+// And example of restricting the click alert to 
+// an element on the page.
+var myImage = document.getElementById("mainImage");
+myImage.onclick = function() {
+	alert("You clicked on the picture!");
+}
+
+function prepareEventHandlers() {
+	var myImage = document.getElementById("mainImage");
+    myImage.onclick = function() {
+	  alert("You clicked on the picture!");
+	}
+}
+
+
+window.onload = function() {
+	// preps everything and ensures 
+	// other js functions don't get
+	// called before document has
+	// completely loaded.
+	prepareEventHandlers(); // This is a named function call nested inside an anonymous function.
+}
+
 

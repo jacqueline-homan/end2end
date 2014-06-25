@@ -67,6 +67,20 @@ function prepareEventHandlers() {
     myImage.onclick = function() {
 	  alert("You clicked on the picture!");
 	}
+	//onfocus and onblur event handler illustration
+    var emailField = document.getElementById("email");
+	emailField.onfocus = function() {
+	if (emailField.value == "your email") {
+		emailField.value = "";
+	}
+};
+
+	emailField.onblur = function() {
+	if (emailField.value == "") {
+        emailField.value = "your email";
+	}
+};
+
 }
 
 
@@ -79,3 +93,26 @@ window.onload = function() {
 }
 
 
+
+//Sometimes we want js to run later or call a
+// function in 60 seconds or every 5 sec, etc.
+// Two main methods for timers: setTimeout and setInterval
+// these timer functions are in milliseconds
+function simpleMessage() {
+	alert("Go change your pants!");
+}
+setTimeout(simpleMessage, 5000);
+
+
+var myImage = document.getElementById("mainImage");
+var imageArray = ["images/Blue-roses.jpg", "images/Purple-Rose.jpg", "images/White-Rose.jpg", "images/orange-rose.jpg", "images/pink-roses.jpg", "images/red-roses.jpg", "images/yellow-roses.jpg", "images/murdock.jpg", "images/dorothy-red-ruby-slippers.jpg"];
+var imageIndex = 0;
+
+function changeImage(){
+	myImage.setAttribute("src",imageArray[imageIndex]);
+	imageIndex++;
+	if (imageIndex >= imageArray.length) {
+		imageIndex = 0;
+	}
+}
+setInterval(changeImage, 5000);

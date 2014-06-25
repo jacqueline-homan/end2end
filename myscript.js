@@ -98,11 +98,6 @@ window.onload = function() {
 // function in 60 seconds or every 5 sec, etc.
 // Two main methods for timers: setTimeout and setInterval
 // these timer functions are in milliseconds
-function simpleMessage() {
-	alert("Go change your pants!");
-}
-setTimeout(simpleMessage, 5000);
-
 
 var myImage = document.getElementById("mainImage");
 var imageArray = ["images/Blue-roses.jpg", "images/Purple-Rose.jpg", "images/White-Rose.jpg", "images/orange-rose.jpg", "images/pink-roses.jpg", "images/red-roses.jpg", "images/yellow-roses.jpg", "images/murdock.jpg", "images/dorothy-red-ruby-slippers.jpg"];
@@ -116,3 +111,11 @@ function changeImage(){
 	}
 }
 setInterval(changeImage, 5000);
+
+//Sometimes we may want some random alert
+// to pop up x-number of seconds later.
+//So we use the setTimeout, like so:
+/*function simpleMessage() {
+	alert("Go change your pants!");
+}
+setTimeout(simpleMessage, 5000); */

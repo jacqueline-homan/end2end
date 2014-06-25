@@ -1,0 +1,47 @@
+<html>
+<head></head>
+<body>
+
+
+<?php
+
+$thing = "<h2>WORDS</h2>"; // string of markup! Notice the double-quotes!!!
+
+$other = "<h1>Well howdy.</h1>";
+
+$werd = "<div>$other</diV>";
+
+$moar += "<div>$thing</div>$werd"; // PHP parses any variables it finds inside double-quoted strings!
+
+$noway = 'None for you! $thing $werd $moar'; // it does not parse single quoted strings!
+
+// okay let's escape to html...
+
+?>
+
+<div id="main">
+
+<ul>
+  <li>A list</li>
+  <li>because reason</li>
+</ul>
+
+<?php
+
+// hop back into php so we can echo out our string of markup!!
+
+echo $moar;
+
+// hop back out!!
+
+?>
+
+<h3>Ta da!! This is just markup. No PHP was parsed in the forming of this node. :D</h3>
+
+
+</div>
+
+
+</body>
+
+</html>

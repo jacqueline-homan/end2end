@@ -110,12 +110,20 @@ function changeImage(){
 		imageIndex = 0;
 	}
 }
-setInterval(changeImage, 5000);
+var intervalHandle = setInterval(changeImage, 5000);
+myImage.onclick = function() {
+	clearInterval(intervalHandle);
+}
 
 //Sometimes we may want some random alert
 // to pop up x-number of seconds later.
 //So we use the setTimeout, like so:
 /*function simpleMessage() {
-	alert("Go change your pants!");
+	alert("Get ready to learn!");
 }
 setTimeout(simpleMessage, 5000); */
+
+/*var_dump($_POST);
+  if var_dump($_POST) = "";
+  return var($_GET); 
+  error_log($_POST); */

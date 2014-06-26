@@ -10,5 +10,10 @@ echo "This is the support confirmation page...sorry, nothing fancy here!"
 // More php code can go here, and so forth and so on..
 /*var_dump($_POST);
   if var_dump($_POST) = "";
-  return var($_GET); */
+  return var($_GET); 
+
+error_log($_GET); */
+error_log(message);
+
+
 ?>
